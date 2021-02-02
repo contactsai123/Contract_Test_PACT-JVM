@@ -1,17 +1,22 @@
 //build.gradle script
 buildscript {
 	ext {
-        springBootVersion = '1.5.9.RELEASE'    }
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-       classpath 'au.com.dius:pact-jvm-provider-gradle_2.12:3.5.22'
+		springBootVersion = '2.4.2'    }
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+	//   classpath 'au.com.dius:pact-jvm-provider-gradle_2.12:3.5.22'
 	   classpath('se.transmode.gradle:gradle-docker:1.2')
-	   classpath(
-          "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")	
-    }
+	  // classpath(
+		 // "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
 }
+
+plugins {
+	id "au.com.dius.pact" version "4.1.0"
+	id 'org.springframework.boot' version '2.4.2'
+  }
 
 //Apply repositories
 repositories {
@@ -26,29 +31,27 @@ apply plugin: 'au.com.dius.pact'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'docker'
 
-
 group = 'com.pact.test'
-
-description = "PACT_JVM"
+description = "Contract_Test_PACT-JVM"
 
 compileJava {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-	}
+}
 
 //Apply dependencies
 dependencies {
-    testCompile group: 'org.apache.httpcomponents', name: 'fluent-hc', version:'4.5.1'
-    testCompile group: 'org.json', name: 'json', version:'20171018'
-    testCompile group: 'junit', name: 'junit', version:'4.12'
-    testCompile group: 'au.com.dius', name: 'pact-jvm-consumer-junit_2.12', version:'3.5.22'	
-    testCompile group: 'au.com.dius', name: 'pact-jvm-provider_2.12', version: '3.5.22'
-   	testCompile group: 'com.jayway.restassured', name: 'rest-assured', version: '2.9.0'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'1.5.9.RELEASE'
-    testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'1.5.9.RELEASE') {
+	testCompile group: 'org.apache.httpcomponents', name: 'fluent-hc', version:'4.5.1'
+	testCompile group: 'org.json', name: 'json', version:'20171018'
+	testCompile group: 'junit', name: 'junit', version:'4.12'
+	testCompile group: 'au.com.dius', name: 'pact-jvm-consumer-junit', version: '4.0.10'
+	testCompile group: 'au.com.dius', name: 'pact-jvm-provider-gradle', version: '4.0.10'
+	testCompile group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
+	compile group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'2.4.2'
+	testCompile(group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.4.2') {
 	exclude(module: 'commons-logging')
-	}
-   
+	}  
 }
 
 jar {
@@ -77,35 +80,39 @@ pact {
 		  pactBrokerUrl = 'https://sivasailem.pact.dius.com.au'
 		  pactBrokerUsername = 'ZVPfu3GzqtwqrNZTrcSTjEeTcbcgZen'
 		  pactBrokerPassword = 'gOFZjnwvNoHtZdzKW06UgX9yFA5Z7Qk'
+			//pactBrokerUrl = 'https://contactsai123.pact.dius.com.au'
+			//pactBrokerUsername='contactsai123@gmail.com'
+			//pactBrokerToken= 'yCHrvXCrajEEPnEVt5SWaA'
   }
   
-      serviceProviders {  
-        // You can define as many as you need, but each must have a unique name
-        UserService {
-            // All the provider properties are optional, and have sensible defaults (shown below)
-            protocol = 'http'
-           //host = 'localhost'
-		host='a1afdb7e4f54a11e8b50b066a763dec8-1873923084.us-west-2.elb.amazonaws.com'
-            port = 8111
-            project.version = "2.0.1"
+	  serviceProviders {
+		// You can define as many as you need, but each must have a unique name
+		UserService {
+			// All the provider properties are optional, and have sensible defaults (shown below)
+			protocol = 'http'
+		   host = 'localhost'
+		//host='a1afdb7e4f54a11e8b50b066a763dec8-1873923084.us-west-2.elb.amazonaws.com'
+			port = 8111
+			project.version = "2.0.1"
 			
 			//Verifying pact from Local. Comment the below lines and uncomment hasPactsFromPactBroker if you need to verify results from broker
 			//hasPactsWith('consumers') {
-               // pactFileLocation = file('pacts') 
+			   // pactFileLocation = file('pacts')
 			//}
 			
 			//Run pactVerify task if you need to send the verification results back to PactBroker. Provide the pactUrl, pactUser, pactPassword in Gradle.properties file
 			//You need to publish Pact to broker first by running pactPublish command
 			
 			hasPactsFromPactBroker('https://sivasailem.pact.dius.com.au', authentication: ['Basic','ZVPfu3GzqtwqrNZTrcSTjEeTcbcgZen', 'gOFZjnwvNoHtZdzKW06UgX9yFA5Z7Qk'])
+			//hasPactsFromPactBroker('https://contactsai123.pact.dius.com.au', authentication: ['Basic','contactsai123@gmail.com', 'yCHrvXCrajEEPnEVt5SWaA'])
 				}
-        }            
+		}
 
   
   //Publish PACT report
    reports {
-      defaultReports() // adds the standard console output
-      markdown // report in markdown format
-      json // report in json format
+	  defaultReports() // adds the standard console output
+	  markdown // report in markdown format
+	  json // report in json format
    }
 }

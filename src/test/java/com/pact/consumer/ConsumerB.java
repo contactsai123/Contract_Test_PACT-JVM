@@ -1,14 +1,14 @@
 package com.pact.consumer;
 
-import au.com.dius.pact.consumer.Pact;
-import au.com.dius.pact.consumer.PactProviderRuleMk2;
-import au.com.dius.pact.consumer.PactVerification;
 import au.com.dius.pact.consumer.dsl.DslPart;
 import au.com.dius.pact.consumer.dsl.PactDslJsonBody;
 import au.com.dius.pact.consumer.dsl.PactDslWithProvider;
-import au.com.dius.pact.model.RequestResponsePact;
-import com.jayway.restassured.*;
-import com.jayway.restassured.http.*;
+import au.com.dius.pact.consumer.junit.PactProviderRule;
+import au.com.dius.pact.consumer.junit.PactVerification;
+import au.com.dius.pact.core.model.RequestResponsePact;
+import au.com.dius.pact.core.model.annotations.Pact;
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 
 import org.junit.Assert;
 import org.junit.Rule;
@@ -23,7 +23,7 @@ import static org.junit.Assert.assertTrue;
 
 public class ConsumerB {
     @Rule
-    public PactProviderRuleMk2 provider = new PactProviderRuleMk2("UserService", "localhost", 8112, this);
+    public PactProviderRule provider = new PactProviderRule("UserService", "localhost", 8112, this);
 
     @Pact(consumer = "ConsumerB")
     public RequestResponsePact createPact(PactDslWithProvider builder) {

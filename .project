@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Pact-JVM-Example</name>
-	<comment>PACT_JVM</comment>
-	<projects/>
-	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
-	</natures>
+	<name>Contract_Test_PACT-JVM</name>
+	<comment>Contract_Test_PACT-JVM</comment>
+	<projects>
+	</projects>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
-			<arguments/>
+			<arguments>
+			</arguments>
 		</buildCommand>
 	</buildSpec>
-	<linkedResources/>
-	<filteredResources/>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
 </projectDescription>

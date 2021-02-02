@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.728s</div>
+<div class="counter">3.797s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">runTest</td>
-<td>2.728s</td>
+<td class="success">3.797s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,95 +87,103 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>22:34:50.383 [Test worker] DEBUG au.com.dius.pact.consumer.BaseMockServer - Starting mock server
-22:34:50.388 [Test worker] DEBUG au.com.dius.pact.consumer.BaseMockServer - Mock server started: /127.0.0.1:8112
-22:34:50.966 [Test worker] DEBUG org.apache.http.impl.conn.BasicHttpClientConnectionManager - Get connection for route {}-&gt;http://localhost:8112
-22:34:50.989 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to localhost/127.0.0.1:8112
-22:34:50.992 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 127.0.0.1:53064&lt;-&gt;127.0.0.1:8112
-22:34:50.995 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; OPTIONS / HTTP/1.1
-22:34:50.996 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; X-PACT-BOOTCHECK: true
-22:34:50.996 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Host: localhost:8112
-22:34:50.997 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Connection: Keep-Alive
-22:34:50.998 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
-22:34:50.998 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;OPTIONS / HTTP/1.1[\r][\n]&quot;
-22:34:50.999 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;X-PACT-BOOTCHECK: true[\r][\n]&quot;
-22:34:50.999 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Host: localhost:8112[\r][\n]&quot;
-22:34:51.000 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
-22:34:51.001 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]&quot;
-22:34:51.001 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;
-22:34:51.009 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
-22:34:51.009 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Date: Fri, 30 Nov 2018 17:04:51 GMT[\r][\n]&quot;
-22:34:51.009 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Transfer-encoding: chunked[\r][\n]&quot;
-22:34:51.009 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;X-pact-bootcheck: true[\r][\n]&quot;
-22:34:51.009 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;
-22:34:51.013 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; HTTP/1.1 200 OK
-22:34:51.014 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Date: Fri, 30 Nov 2018 17:04:51 GMT
-22:34:51.014 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Transfer-encoding: chunked
-22:34:51.014 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; X-pact-bootcheck: true
-22:34:51.025 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
-22:34:51.025 [Test worker] DEBUG org.apache.http.impl.execchain.MinimalClientExec - Connection discarded
-22:34:51.026 [Test worker] DEBUG org.apache.http.impl.conn.BasicHttpClientConnectionManager - Releasing connection [Not bound]
-22:34:51.791 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}-&gt;http://localhost:8112
-22:34:51.796 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8112
-22:34:51.802 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
-22:34:51.805 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
-22:34:51.805 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
-22:34:51.805 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
-22:34:51.806 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
-22:34:51.806 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /user/Peter/214 HTTP/1.1
-22:34:51.806 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;GET /user/Peter/214 HTTP/1.1[\r][\n]&quot;
-22:34:51.807 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
-22:34:51.807 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Accept: */*[\r][\n]&quot;
-22:34:51.807 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Content-Length: 0[\r][\n]&quot;
-22:34:51.807 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Host: localhost:8112[\r][\n]&quot;
-22:34:51.807 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
-22:34:51.807 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)[\r][\n]&quot;
-22:34:51.808 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
-22:34:51.808 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;[\r][\n]&quot;
-22:34:51.808 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; GET /user/Peter/214 HTTP/1.1
-22:34:51.808 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Content-Type: application/json; charset=UTF-8
-22:34:51.808 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Accept: */*
-22:34:51.808 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Content-Length: 0
-22:34:51.808 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Host: localhost:8112
-22:34:51.808 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Connection: Keep-Alive
-22:34:51.808 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_144)
-22:34:51.809 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Accept-Encoding: gzip,deflate
-22:34:51.831 [Thread-5] DEBUG au.com.dius.pact.consumer.BaseMockServer - Received request: 	method: GET
+<pre>14:54:12.148 [Test worker] DEBUG au.com.dius.pact.consumer.BaseJdkMockServer - Starting mock server
+14:54:12.154 [Test worker] DEBUG au.com.dius.pact.consumer.BaseJdkMockServer - Mock server started: /127.0.0.1:8112
+14:54:12.761 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: default
+14:54:12.770 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+14:54:12.772 [Test worker] DEBUG org.apache.http.impl.conn.BasicHttpClientConnectionManager - Get connection for route {}-&gt;http://localhost:8112
+14:54:12.785 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: set socket timeout to 0
+14:54:12.786 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Opening connection {}-&gt;http://localhost:8112
+14:54:12.787 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connecting to localhost/127.0.0.1:8112
+14:54:12.792 [Test worker] DEBUG org.apache.http.impl.conn.DefaultHttpClientConnectionOperator - Connection established 127.0.0.1:63082&lt;-&gt;127.0.0.1:8112
+14:54:12.792 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Executing request OPTIONS / HTTP/1.1
+14:54:12.793 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+14:54:12.793 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+14:54:12.797 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; OPTIONS / HTTP/1.1
+14:54:12.797 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; X-PACT-BOOTCHECK: true
+14:54:12.797 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Host: localhost:8112
+14:54:12.797 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Connection: Keep-Alive
+14:54:12.797 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_144)
+14:54:12.797 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &gt;&gt; Accept-Encoding: gzip,deflate
+14:54:12.797 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;OPTIONS / HTTP/1.1[\r][\n]&quot;
+14:54:12.798 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;X-PACT-BOOTCHECK: true[\r][\n]&quot;
+14:54:12.798 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Host: localhost:8112[\r][\n]&quot;
+14:54:12.798 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+14:54:12.798 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_144)[\r][\n]&quot;
+14:54:12.798 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+14:54:12.798 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &gt;&gt; &quot;[\r][\n]&quot;
+14:54:12.809 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
+14:54:12.809 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Date: Tue, 02 Feb 2021 09:24:12 GMT[\r][\n]&quot;
+14:54:12.809 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;Transfer-encoding: chunked[\r][\n]&quot;
+14:54:12.810 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;X-pact-bootcheck: true[\r][\n]&quot;
+14:54:12.810 [Test worker] DEBUG org.apache.http.wire - http-outgoing-0 &lt;&lt; &quot;[\r][\n]&quot;
+14:54:12.813 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; HTTP/1.1 200 OK
+14:54:12.813 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Date: Tue, 02 Feb 2021 09:24:12 GMT
+14:54:12.813 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; Transfer-encoding: chunked
+14:54:12.813 [Test worker] DEBUG org.apache.http.headers - http-outgoing-0 &lt;&lt; X-pact-bootcheck: true
+14:54:12.817 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+14:54:12.821 [Test worker] DEBUG org.apache.http.impl.conn.DefaultManagedHttpClientConnection - http-outgoing-0: Close connection
+14:54:12.822 [Test worker] DEBUG org.apache.http.impl.execchain.MainClientExec - Connection discarded
+14:54:12.822 [Test worker] DEBUG org.apache.http.impl.conn.BasicHttpClientConnectionManager - Releasing connection [Not bound]
+14:54:14.475 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}-&gt;http://localhost:8112
+14:54:14.482 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to localhost:8112
+14:54:14.490 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+14:54:14.492 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+14:54:14.492 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+14:54:14.494 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+14:54:14.494 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+14:54:14.495 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Sending request: GET /user/Peter/214 HTTP/1.1
+14:54:14.502 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;GET /user/Peter/214 HTTP/1.1[\r][\n]&quot;
+14:54:14.502 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Content-Type: application/json; charset=UTF-8[\r][\n]&quot;
+14:54:14.502 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Accept: */*[\r][\n]&quot;
+14:54:14.502 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Host: localhost:8112[\r][\n]&quot;
+14:54:14.502 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Connection: Keep-Alive[\r][\n]&quot;
+14:54:14.503 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_144)[\r][\n]&quot;
+14:54:14.507 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;Accept-Encoding: gzip,deflate[\r][\n]&quot;
+14:54:14.507 [Test worker] DEBUG org.apache.http.wire -  &gt;&gt; &quot;[\r][\n]&quot;
+14:54:14.507 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; GET /user/Peter/214 HTTP/1.1
+14:54:14.507 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Content-Type: application/json; charset=UTF-8
+14:54:14.507 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Accept: */*
+14:54:14.507 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Host: localhost:8112
+14:54:14.507 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Connection: Keep-Alive
+14:54:14.507 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_144)
+14:54:14.508 [Test worker] DEBUG org.apache.http.headers - &gt;&gt; Accept-Encoding: gzip,deflate
+14:54:14.514 [Thread-5] DEBUG au.com.dius.pact.consumer.BaseJdkMockServer - Received request: 	method: GET
 	path: /user/Peter/214
-	query: [:]
-	headers: [Accept-encoding:gzip,deflate, Accept:*/*, Connection:Keep-Alive, Host:localhost:8112, User-agent:Apache-HttpClient/4.5.3 (Java/1.8.0_144), Content-type:application/json; charset=UTF-8, Content-length:0]
+	query: {}
+	headers: {Accept-encoding=[gzip,deflate], Accept=[*/*], Connection=[Keep-Alive], Host=[localhost:8112], User-agent=[Apache-HttpClient/4.5.5 (Java/1.8.0_144)], Content-type=[application/json; charset=UTF-8]}
 	matchers: MatchingRules(rules={})
 	generators: Generators(categories={})
-	body: OptionalBody(state=EMPTY, value=)
-22:34:51.879 [Thread-5] DEBUG au.com.dius.pact.model.RequestMatching$ - comparing to expected request: 
+	body: EMPTY
+14:54:14.516 [Thread-5] DEBUG au.com.dius.pact.core.matchers.RequestMatching - comparing to expected request: 
 	method: GET
 	path: /user/Peter/214
-	query: [:]
-	headers: [:]
+	query: {}
+	headers: {}
 	matchers: MatchingRules(rules={})
 	generators: Generators(categories={})
-	body: OptionalBody(state=MISSING, value=null)
-22:34:52.061 [Thread-5] DEBUG au.com.dius.pact.model.RequestMatching$ - Request mismatch: List()
-22:34:52.128 [Thread-5] DEBUG au.com.dius.pact.consumer.BaseMockServer - Generating response: 	status: 200
-	headers: [Content-Type:application/json]
-	matchers: MatchingRules(rules={body=Category(name=body, matchingRules={$.empid=MatchingRuleGroup(rules=[au.com.dius.pact.model.matchingrules.TypeMatcher@7d311ea8], ruleLogic=AND), $.age=MatchingRuleGroup(rules=[NumberTypeMatcher(numberType=INTEGER)], ruleLogic=AND)})})
+	body: MISSING
+14:54:14.525 [Thread-5] DEBUG au.com.dius.pact.core.matchers.RequestMatching - Request mismatch: []
+14:54:14.613 [Thread-5] DEBUG au.com.dius.pact.consumer.BaseJdkMockServer - Generating response: 	status: 200
+	headers: {Content-Type=[application/json]}
+	matchers: MatchingRules(rules={body=Category(name=body, matchingRules={$.empid=MatchingRuleGroup(rules=[au.com.dius.pact.core.model.matchingrules.TypeMatcher@6d9dee3f], ruleLogic=AND), $.age=MatchingRuleGroup(rules=[NumberTypeMatcher(numberType=INTEGER)], ruleLogic=AND)})})
 	generators: Generators(categories={})
-	body: OptionalBody(state=PRESENT, value={&quot;empid&quot;:&quot;214&quot;,&quot;age&quot;:30})
-22:34:52.130 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
-22:34:52.130 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;Date: Fri, 30 Nov 2018 17:04:52 GMT[\r][\n]&quot;
-22:34:52.130 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;Content-length: 24[\r][\n]&quot;
-22:34:52.130 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;Content-Type: application/json[\r][\n]&quot;
-22:34:52.130 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;[\r][\n]&quot;
-22:34:52.130 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
-22:34:52.130 [Test worker] DEBUG org.apache.http.headers - &lt;&lt; HTTP/1.1 200 OK
-22:34:52.130 [Test worker] DEBUG org.apache.http.headers - &lt;&lt; Date: Fri, 30 Nov 2018 17:04:52 GMT
-22:34:52.130 [Test worker] DEBUG org.apache.http.headers - &lt;&lt; Content-length: 24
-22:34:52.130 [Test worker] DEBUG org.apache.http.headers - &lt;&lt; Content-Type: application/json
-22:34:52.131 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
-22:34:52.153 [Test worker] DEBUG com.jayway.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
-22:34:52.153 [Test worker] DEBUG com.jayway.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-22:34:52.318 [Test worker] DEBUG au.com.dius.pact.consumer.BaseMockServer - Mock server shutdown
-22:34:52.334 [Test worker] DEBUG au.com.dius.pact.consumer.BaseMockServer - Writing pact ConsumerA -&gt; UserService to file pacts\ConsumerA-UserService.json
+	body: PRESENT({&quot;empid&quot;:&quot;214&quot;,&quot;age&quot;:30})
+14:54:14.615 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;HTTP/1.1 200 OK[\r][\n]&quot;
+14:54:14.615 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;Date: Tue, 02 Feb 2021 09:24:14 GMT[\r][\n]&quot;
+14:54:14.615 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;Content-length: 24[\r][\n]&quot;
+14:54:14.615 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;Content-Type: application/json[\r][\n]&quot;
+14:54:14.615 [Test worker] DEBUG org.apache.http.wire -  &lt;&lt; &quot;[\r][\n]&quot;
+14:54:14.615 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+14:54:14.615 [Test worker] DEBUG org.apache.http.headers - &lt;&lt; HTTP/1.1 200 OK
+14:54:14.615 [Test worker] DEBUG org.apache.http.headers - &lt;&lt; Date: Tue, 02 Feb 2021 09:24:14 GMT
+14:54:14.615 [Test worker] DEBUG org.apache.http.headers - &lt;&lt; Content-length: 24
+14:54:14.615 [Test worker] DEBUG org.apache.http.headers - &lt;&lt; Content-Type: application/json
+14:54:14.616 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+14:54:14.659 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+14:54:14.660 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+14:54:14.845 [Test worker] DEBUG au.com.dius.pact.consumer.BaseJdkMockServer - Mock server shutdown
+14:54:14.870 [Test worker] DEBUG au.com.dius.pact.consumer.BaseMockServer - Writing pact ConsumerA -&gt; UserService to file build\pacts\ConsumerA-UserService.json
 </pre>
 </span>
 </div>
@@ -187,7 +195,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 4.4</a> at Nov 30, 2018 10:34:52 PM</p>
+<a href="http://www.gradle.org">Gradle 6.8</a> at Feb 2, 2021 2:54:16 PM</p>
 </div>
 </div>
 </body>
